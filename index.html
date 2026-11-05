@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shredonomics Privacy Policy</title>
-<meta name="description" content="Privacy policy for the Shredonomics app (iOS and Android) in Polish, English, German and Spanish.">
+<meta name="description" content="Privacy policy and chest odds for the Shredonomics app (iOS and Android) in Polish, English, German and Spanish.">
 <style>
   :root { --bg: #1a2233; --surface: #22304a; --line: #33415c; --text: #f4ebd0; --muted: #a3a99f; --accent: #e0a526; }
   * { box-sizing: border-box; }
@@ -25,6 +25,12 @@
   .box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
   ul { padding-left: 20px; }
   a { color: var(--accent); overflow-wrap: anywhere; }
+  code { overflow-wrap: anywhere; }
+  .table { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  td + td, th + th { text-align: right; white-space: nowrap; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -42,7 +48,7 @@
 
 <section id="pl" lang="pl">
   <h1>Polityka prywatności</h1>
-  <p class="meta">Shredonomics (iOS i Android) · obowiązuje od 4 listopada 2026</p>
+  <p class="meta">Shredonomics (iOS i Android) · obowiązuje od 5 listopada 2026</p>
   <div class="box">
     <p>W skrócie: gra działa bez konta i bez internetu. Twoje postępy i ustawienia zostają na urządzeniu. Nie mamy własnego serwera. Dane potrzebne do reklam przetwarza Google (AdMob), a zakupy obsługują Apple i Google.</p>
   </div>
@@ -51,11 +57,11 @@
   <p>Aplikację Shredonomics tworzy JaworIT Daniel Jaworski (administrator danych). Kontakt: <a href="mailto:kontakt@jaworit.pl">kontakt@jaworit.pl</a>.</p>
 
   <h2>Dane na Twoim urządzeniu</h2>
-  <p>Gra zapisuje lokalnie, w pliku zapisu w pamięci telefonu: postęp (zniszczona wartość, Premia, narzędzia, ulepszenia, roboty, lokacja, Pieczątki i rekord kadencji), czas ostatniego zapisu (do obliczenia zarobków offline), czasy odnowienia bonusów, licznik sesji i czas ostatniej reklamy pełnoekranowej (żeby pilnować limitów), ustawienia (język, wibracje, auto-zbieranie) oraz informację, czy kupiłeś Premium. Te dane nie są wysyłane do nas ani nikomu innemu. Usuniesz je, czyszcząc dane aplikacji lub ją odinstalowując.</p>
+  <p>Gra zapisuje lokalnie, w pliku zapisu w pamięci telefonu: postęp (zniszczona wartość, Premia, narzędzia, ulepszenia, roboty, lokacja, Pieczątki, kadencje i rekord), skrzynki, dopalacze i osiągnięcia, czas ostatniego zapisu (do obliczenia zarobków offline), czasy odnowienia bonusów, dzienny licznik skrzynek za reklamę, licznik sesji i czas ostatniej reklamy pełnoekranowej (żeby pilnować limitów), ustawienia (język, wibracje, dźwięk, auto-zbieranie) oraz informację, czy kupiłeś Premium. Te dane nie są wysyłane do nas ani nikomu innemu. Usuniesz je, czyszcząc dane aplikacji lub ją odinstalowując.</p>
   <p>Nie zakładasz konta, nie podajesz imienia ani adresu e-mail. Aplikacja nie używa narzędzi analitycznych ani do raportowania awarii i nie wysyła powiadomień.</p>
 
   <h2>Reklamy (Google AdMob)</h2>
-  <p>Wersja darmowa pokazuje baner na dole ekranu, reklamę pełnoekranową wyłącznie przy przejściu do nowej lokacji (nigdy w pierwszej sesji, najwyżej jedną na 15 minut) oraz reklamy z nagrodą, które uruchamiasz sam. Reklamy dostarcza Google przez Google Mobile Ads SDK. Gdy reklama jest pobierana, SDK może zbierać i przesyłać do Google:</p>
+  <p>Wersja darmowa pokazuje baner na dole ekranu, reklamę pełnoekranową wyłącznie przy przejściu do nowej lokacji (nigdy w pierwszej sesji, najwyżej jedną na 15 minut) oraz reklamy z nagrodą, które uruchamiasz sam: TURBO, darmowe ulepszenie, podwojenie zarobków offline i skrzynka za reklamę. Reklamy dostarcza Google przez Google Mobile Ads SDK. Gdy reklama jest pobierana, SDK może zbierać i przesyłać do Google:</p>
   <ul>
     <li>identyfikatory urządzenia, np. identyfikator reklamowy (IDFA na iOS, za Twoją zgodą; identyfikator reklamowy Androida) i identyfikator zestawu aplikacji,</li>
     <li>adres IP i przybliżoną lokalizację wyliczoną z adresu IP,</li>
@@ -64,14 +70,35 @@
   </ul>
   <p>Google używa tych danych do wyświetlania i mierzenia reklam, analityki oraz zapobiegania oszustwom. Dane są szyfrowane w trakcie przesyłania. Szczegóły: <a href="https://policies.google.com/technologies/partner-sites">Jak Google wykorzystuje informacje z aplikacji partnerów</a> i <a href="https://policies.google.com/privacy">Polityka prywatności Google</a>.</p>
 
+  <h2>Sprawdzanie połączenia</h2>
+  <p>Żeby przycisk reklamy z nagrodą pokazywał „Brak połączenia” zamiast czekać na reklamę, która nie przyjdzie, aplikacja sprawdza, czy telefon jest online. Wysyła puste zapytanie HTTPS (HEAD) pod adres <code>clients3.google.com/generate_204</code>: przy starcie, po powrocie do aplikacji i potem najwyżej raz na 30 sekund, gdy gra jest otwarta. Zapytanie nie zawiera identyfikatorów, plików cookie ani danych z gry, a odpowiedź nie jest nigdzie zapisywana. Jak przy każdym połączeniu internetowym, Google widzi przy tym adres IP urządzenia.</p>
+
   <h2>Zgoda na reklamy (RODO)</h2>
-  <p>W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii przed pierwszą reklamą aplikacja pokazuje formularz zgody Google (UMP). Możesz zgodzić się na reklamy spersonalizowane, odmówić lub wybrać szczegółowe opcje. Bez zgody reklamy nie są personalizowane. Decyzję zmienisz w każdej chwili w Ustawieniach → „Prywatność reklam”. Podstawą przetwarzania jest Twoja zgoda (art. 6 ust. 1 lit. a RODO) lub, w zakresie reklam niespersonalizowanych i zapobiegania oszustwom, prawnie uzasadniony interes.</p>
+  <p>W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii przed pierwszą reklamą aplikacja pokazuje formularz zgody Google (UMP). Możesz zgodzić się na reklamy spersonalizowane, odmówić lub wybrać szczegółowe opcje. Bez zgody reklamy nie są personalizowane. Decyzję zmienisz w każdej chwili w Ustawieniach (ikona zębatki) → „Prywatność reklam”; przycisk jest widoczny tam, gdzie obowiązuje formularz zgody. Podstawą przetwarzania jest Twoja zgoda (art. 6 ust. 1 lit. a RODO) lub, w zakresie reklam niespersonalizowanych i zapobiegania oszustwom, prawnie uzasadniony interes.</p>
 
   <h2>Śledzenie na iOS (ATT)</h2>
-  <p>Na iPhonie system zapyta, czy aplikacja może śledzić Twoją aktywność. Tylko jeśli się zgodzisz, Google otrzyma identyfikator reklamowy IDFA. Gra działa tak samo bez tej zgody. Zmienisz to w Ustawieniach systemu → Prywatność i ochrona → Śledzenie. Na Androidzie identyfikator reklamowy zresetujesz lub usuniesz w ustawieniach systemu.</p>
+  <p>Na iPhonie, po formularzu zgody, system zapyta, czy aplikacja może śledzić Twoją aktywność. Tylko jeśli się zgodzisz, Google otrzyma identyfikator reklamowy IDFA. Gra działa tak samo bez tej zgody. Zmienisz to w Ustawieniach systemu → Prywatność i ochrona → Śledzenie. Na Androidzie identyfikator reklamowy zresetujesz lub usuniesz w ustawieniach systemu.</p>
 
   <h2>Zakupy w aplikacji</h2>
-  <p>Jednorazowy zakup „Premium” obsługuje Apple (App Store) lub Google (Google Play). Nie widzimy Twoich danych płatniczych. Aplikacja otrzymuje tylko informację, czy zakup jest aktywny, i zapisuje ją na urządzeniu. Obowiązują zasady prywatności Apple lub Google.</p>
+  <p>Jednorazowy zakup „Premium” obsługuje Apple (App Store) lub Google (Google Play). Nie widzimy Twoich danych płatniczych. Aplikacja otrzymuje tylko informację, czy zakup jest aktywny, i zapisuje ją na urządzeniu. Obowiązują zasady prywatności Apple lub Google. Premium to jedyny produkt, który gra sprzedaje.</p>
+
+  <h2>Skrzynki i szanse</h2>
+  <p>Skrzynki zdobywasz grając. Nigdy nie są na sprzedaż i żaden zakup za prawdziwe pieniądze nie daje losowej nagrody.</p>
+  <ul>
+    <li>Drewniana skrzynka: wypada z kupek pieniędzy podczas aktywnej gry, co 3,7–4,9 minuty.</li>
+    <li>Srebrna skrzynka: raz dziennie (według daty w telefonie).</li>
+    <li>Złota skrzynka: w każdej kadencji, gdy zniszczona wartość pierwszy raz przekroczy 1 mln, 10 mln, 100 mln i 1 mld. Srebrne i złote skrzynki dają też niektóre osiągnięcia.</li>
+    <li>Skrzynka za reklamę: dodatkowa drewniana skrzynka za obejrzenie reklamy z nagrodą. Zawsze dobrowolna, najwyżej jedna na 30 minut i 5 dziennie.</li>
+  </ul>
+  <p>Każda skrzynka daje gotówkę (Premię) wartą podaną liczbę minut Twojego obecnego dochodu oraz jedno losowanie dodatku:</p>
+  <div class="table"><table>
+    <tr><th></th><th>Drewniana</th><th>Srebrna</th><th>Złota</th></tr>
+    <tr><td>Gotówka (minuty dochodu)</td><td>0,3</td><td>1,5</td><td>2</td></tr>
+    <tr><td>Dopalacz</td><td>45%</td><td>50%</td><td>55%</td></tr>
+    <tr><td>Gruba kasa (gotówka ×3)</td><td>55%</td><td>42%</td><td>41%</td></tr>
+    <tr><td>Gwiazdka (+1★ przy Nowej emisji)</td><td>0%</td><td>8%</td><td>4%</td></tr>
+  </table></div>
+  <p>Dopalacz to jeden z czterech, każdy tak samo możliwy: Magnes, Podwójna wypłata, Buty sprintera, Nadbieg. Gdy niszczarka nie nadąża, Magnes i Buty sprintera przychodzą jako Nadbieg. Z Premium skrzynka za reklamę nie wymaga reklamy i nie jest losowa: zamiast niej dostajesz stałą Paczkę Premium wartą 0,6 minuty dochodu, z tym samym limitem. Te szanse pokazuje też gra: przycisk „i” przy skrzynce za reklamę, na karcie każdej otwartej skrzynki oraz w Ustawieniach → „Szanse w skrzynkach”.</p>
 
   <h2>Dzieci</h2>
   <p>Aplikacja nie jest skierowana do dzieci poniżej 13 lat i świadomie nie zbiera ich danych. Jeśli uważasz, że dziecko przekazało nam dane, napisz do nas.</p>
@@ -88,7 +115,7 @@
 
 <section id="en" lang="en">
   <h1>Privacy Policy</h1>
-  <p class="meta">Shredonomics (iOS and Android) · effective November 4, 2026</p>
+  <p class="meta">Shredonomics (iOS and Android) · effective November 5, 2026</p>
   <div class="box">
     <p>In short: the game works without an account and without internet. Your progress and settings stay on your device. We run no server of our own. Data needed for ads is processed by Google (AdMob), and purchases are handled by Apple and Google.</p>
   </div>
@@ -97,11 +124,11 @@
   <p>Shredonomics is made by JaworIT Daniel Jaworski (data controller). Contact: <a href="mailto:kontakt@jaworit.pl">kontakt@jaworit.pl</a>.</p>
 
   <h2>Data on your device</h2>
-  <p>The game stores the following locally, in a save file on your device: progress (value shredded, Bonus, tools, upgrades, robots, location, Stamps and term record), the time of the last save (to calculate offline earnings), bonus cooldowns, a session counter and the time of the last full-screen ad (to enforce the limits), settings (language, vibration, auto-collect) and whether you bought Premium. This data is not sent to us or anyone else. You can delete it by clearing the app's data or by uninstalling it.</p>
+  <p>The game stores the following locally, in a save file on your device: progress (value shredded, Bonus, tools, upgrades, robots, location, Stamps, terms and your record), chests, boosters and achievements, the time of the last save (to calculate offline earnings), bonus cooldowns, a daily ad-chest counter, a session counter and the time of the last full-screen ad (to enforce the limits), settings (language, haptics, sound, auto-collect) and whether you bought Premium. This data is not sent to us or anyone else. You can delete it by clearing the app's data or by uninstalling it.</p>
   <p>You do not create an account or give us your name or email address. The app uses no analytics or crash-reporting tools and sends no notifications.</p>
 
   <h2>Ads (Google AdMob)</h2>
-  <p>The free version shows a banner at the bottom of the screen, a full-screen ad only when you move to a new location (never in your first session, at most one every 15 minutes), and rewarded ads that you start yourself. Ads are provided by Google through the Google Mobile Ads SDK. When an ad is loaded, the SDK may collect and send to Google:</p>
+  <p>The free version shows a banner at the bottom of the screen, a full-screen ad only when you move to a new location (never in your first session, at most one every 15 minutes), and rewarded ads that you start yourself: TURBO, a free upgrade, doubling your offline earnings and the ad chest. Ads are provided by Google through the Google Mobile Ads SDK. When an ad is loaded, the SDK may collect and send to Google:</p>
   <ul>
     <li>device identifiers, such as the advertising identifier (IDFA on iOS, only with your permission; Android advertising ID) and the app set ID,</li>
     <li>IP address and approximate location derived from the IP address,</li>
@@ -110,14 +137,35 @@
   </ul>
   <p>Google uses this data to show and measure ads, for analytics and to prevent fraud. The data is encrypted in transit. Details: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
+  <h2>Connection check</h2>
+  <p>So that a rewarded-ad button can say "No connection" instead of waiting for an ad that will never arrive, the app checks whether your phone is online. It sends an empty HTTPS request (HEAD) to <code>clients3.google.com/generate_204</code>: at launch, when you return to the app, and then at most once every 30 seconds while the game is open. The request contains no identifiers, cookies or game data, and the answer is not stored anywhere. As with any internet connection, Google sees your device's IP address.</p>
+
   <h2>Ad consent (GDPR)</h2>
-  <p>In the European Economic Area, the UK and Switzerland, the app shows Google's consent form (UMP) before the first ad. You can accept personalized ads, decline, or choose detailed options. Without consent, ads are not personalized. You can change your choice at any time in Settings → "Ad privacy". The legal basis is your consent (Art. 6(1)(a) GDPR) or, for non-personalized ads and fraud prevention, legitimate interest.</p>
+  <p>In the European Economic Area, the UK and Switzerland, the app shows Google's consent form (UMP) before the first ad. You can accept personalized ads, decline, or choose detailed options. Without consent, ads are not personalized. You can change your choice at any time in Settings (the gear icon) → "Ad privacy"; the button appears wherever the consent form applies. The legal basis is your consent (Art. 6(1)(a) GDPR) or, for non-personalized ads and fraud prevention, legitimate interest.</p>
 
   <h2>Tracking on iOS (ATT)</h2>
-  <p>On iPhone, the system asks whether the app may track your activity. Google receives the IDFA advertising identifier only if you allow it. The game works the same without this permission. You can change it in iOS Settings → Privacy &amp; Security → Tracking. On Android, you can reset or delete the advertising ID in the system settings.</p>
+  <p>On iPhone, after the consent form, the system asks whether the app may track your activity. Google receives the IDFA advertising identifier only if you allow it. The game works the same without this permission. You can change it in iOS Settings → Privacy &amp; Security → Tracking. On Android, you can reset or delete the advertising ID in the system settings.</p>
 
   <h2>In-app purchases</h2>
-  <p>The one-time "Premium" purchase is processed by Apple (App Store) or Google (Google Play). We never see your payment details. The app only receives whether the purchase is active and stores that on your device. Apple's or Google's privacy policy applies to the payment.</p>
+  <p>The one-time "Premium" purchase is processed by Apple (App Store) or Google (Google Play). We never see your payment details. The app only receives whether the purchase is active and stores that on your device. Apple's or Google's privacy policy applies to the payment. Premium is the only product the game sells.</p>
+
+  <h2>Chests and odds</h2>
+  <p>Chests are earned by playing. They are never sold, and nothing bought with real money gives a random reward.</p>
+  <ul>
+    <li>Wooden chest: drops from money heaps during active play, every 3.7 to 4.9 minutes.</li>
+    <li>Silver chest: once a day (by your phone's date).</li>
+    <li>Gold chest: each term, the first time the value you have shredded passes 1 million, 10 million, 100 million and 1 billion. Some achievements also give silver and gold chests.</li>
+    <li>Ad chest: an extra wooden chest for watching a rewarded ad. Always optional, at most one every 30 minutes and 5 a day.</li>
+  </ul>
+  <p>Every chest pays cash (Bonus) worth the stated minutes of your current income, plus one roll for an extra:</p>
+  <div class="table"><table>
+    <tr><th></th><th>Wooden</th><th>Silver</th><th>Gold</th></tr>
+    <tr><td>Cash (minutes of income)</td><td>0.3</td><td>1.5</td><td>2</td></tr>
+    <tr><td>Booster</td><td>45%</td><td>50%</td><td>55%</td></tr>
+    <tr><td>Big cash (cash ×3)</td><td>55%</td><td>42%</td><td>41%</td></tr>
+    <tr><td>Bonus star (+1★ at the next New Issue)</td><td>0%</td><td>8%</td><td>4%</td></tr>
+  </table></div>
+  <p>A booster is one of four, equally likely: Magnet, Double Pay, Sprint Shoes, Overdrive. While the shredder is behind, Magnet and Sprint Shoes come as Overdrive. With Premium the ad chest needs no ad and is not random: you get a fixed Premium crate worth 0.6 minutes of income instead, under the same limits. The game shows these odds too: the "i" button next to the ad chest, on the card of every opened chest, and in Settings → "Chest odds".</p>
 
   <h2>Children</h2>
   <p>The app is not directed at children under 13 and does not knowingly collect their data. If you believe a child has provided us with data, please contact us.</p>
@@ -134,7 +182,7 @@
 
 <section id="de" lang="de">
   <h1>Datenschutzerklärung</h1>
-  <p class="meta">Shredonomics (iOS und Android) · gültig ab 4. November 2026</p>
+  <p class="meta">Shredonomics (iOS und Android) · gültig ab 5. November 2026</p>
   <div class="box">
     <p>Kurz gesagt: Das Spiel funktioniert ohne Konto und ohne Internet. Dein Fortschritt und deine Einstellungen bleiben auf deinem Gerät. Wir betreiben keinen eigenen Server. Daten für Werbung verarbeitet Google (AdMob), Käufe wickeln Apple und Google ab.</p>
   </div>
@@ -143,11 +191,11 @@
   <p>Shredonomics wird von JaworIT Daniel Jaworski erstellt (Verantwortlicher). Kontakt: <a href="mailto:kontakt@jaworit.pl">kontakt@jaworit.pl</a>.</p>
 
   <h2>Daten auf deinem Gerät</h2>
-  <p>Das Spiel speichert lokal in einer Speicherdatei auf deinem Gerät: Fortschritt (geschredderter Wert, Prämie, Werkzeuge, Upgrades, Roboter, Ort, Stempel und Amtszeit-Rekord), den Zeitpunkt der letzten Speicherung (für die Offline-Einnahmen), Abklingzeiten der Boni, einen Sitzungszähler und den Zeitpunkt der letzten Vollbildwerbung (für die Limits), Einstellungen (Sprache, Vibration, Auto-Einsammeln) und ob du Premium gekauft hast. Diese Daten werden weder an uns noch an andere gesendet. Du löschst sie über die App-Daten oder durch Deinstallieren.</p>
+  <p>Das Spiel speichert lokal in einer Speicherdatei auf deinem Gerät: Fortschritt (geschredderter Wert, Prämie, Werkzeuge, Upgrades, Roboter, Ort, Stempel, Amtszeiten und Rekord), Truhen, Booster und Erfolge, den Zeitpunkt der letzten Speicherung (für die Offline-Einnahmen), Abklingzeiten der Boni, einen Tageszähler für Werbetruhen, einen Sitzungszähler und den Zeitpunkt der letzten Vollbildwerbung (für die Limits), Einstellungen (Sprache, Vibration, Ton, Auto-Einsammeln) und ob du Premium gekauft hast. Diese Daten werden weder an uns noch an andere gesendet. Du löschst sie über die App-Daten oder durch Deinstallieren.</p>
   <p>Du legst kein Konto an und gibst weder Namen noch E-Mail-Adresse an. Die App nutzt keine Analyse- oder Absturzberichts-Tools und verschickt keine Benachrichtigungen.</p>
 
   <h2>Werbung (Google AdMob)</h2>
-  <p>Die kostenlose Version zeigt ein Banner unten am Bildschirm, Vollbildwerbung nur beim Wechsel an einen neuen Ort (nie in der ersten Sitzung, höchstens eine alle 15 Minuten) und Werbung mit Belohnung, die du selbst startest. Die Werbung liefert Google über das Google Mobile Ads SDK. Beim Laden einer Anzeige kann das SDK folgende Daten erfassen und an Google senden:</p>
+  <p>Die kostenlose Version zeigt ein Banner unten am Bildschirm, Vollbildwerbung nur beim Wechsel an einen neuen Ort (nie in der ersten Sitzung, höchstens eine alle 15 Minuten) und Werbung mit Belohnung, die du selbst startest: TURBO, ein Gratis-Upgrade, doppelte Offline-Einnahmen und die Werbetruhe. Die Werbung liefert Google über das Google Mobile Ads SDK. Beim Laden einer Anzeige kann das SDK folgende Daten erfassen und an Google senden:</p>
   <ul>
     <li>Gerätekennungen, z. B. die Werbe-ID (IDFA auf iOS nur mit deiner Erlaubnis; Android-Werbe-ID) und die App-Set-ID,</li>
     <li>IP-Adresse und daraus abgeleiteter ungefährer Standort,</li>
@@ -156,14 +204,35 @@
   </ul>
   <p>Google nutzt diese Daten, um Anzeigen auszuliefern und zu messen, für Analysen und zur Betrugsvermeidung. Die Übertragung ist verschlüsselt. Details: <a href="https://policies.google.com/technologies/partner-sites">Wie Google Daten von Websites und Apps von Partnern verwendet</a> und die <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.</p>
 
+  <h2>Verbindungsprüfung</h2>
+  <p>Damit eine Belohnungs-Schaltfläche „Keine Verbindung“ anzeigen kann, statt auf eine Anzeige zu warten, die nie kommt, prüft die App, ob dein Telefon online ist. Sie sendet eine leere HTTPS-Anfrage (HEAD) an <code>clients3.google.com/generate_204</code>: beim Start, bei der Rückkehr in die App und danach höchstens alle 30 Sekunden, solange das Spiel geöffnet ist. Die Anfrage enthält keine Kennungen, Cookies oder Spieldaten, und die Antwort wird nirgends gespeichert. Wie bei jeder Internetverbindung sieht Google dabei die IP-Adresse deines Geräts.</p>
+
   <h2>Einwilligung zu Werbung (DSGVO)</h2>
-  <p>Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz zeigt die App vor der ersten Anzeige das Einwilligungsformular von Google (UMP). Du kannst personalisierte Werbung erlauben, ablehnen oder Einstellungen im Detail wählen. Ohne Einwilligung wird keine personalisierte Werbung gezeigt. Deine Wahl änderst du jederzeit unter Einstellungen → „Werbe-Datenschutz“. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. für nicht personalisierte Werbung und Betrugsvermeidung das berechtigte Interesse.</p>
+  <p>Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz zeigt die App vor der ersten Anzeige das Einwilligungsformular von Google (UMP). Du kannst personalisierte Werbung erlauben, ablehnen oder Einstellungen im Detail wählen. Ohne Einwilligung wird keine personalisierte Werbung gezeigt. Deine Wahl änderst du jederzeit unter Einstellungen (Zahnrad-Symbol) → „Werbe-Datenschutz“; die Schaltfläche erscheint überall dort, wo das Einwilligungsformular gilt. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. für nicht personalisierte Werbung und Betrugsvermeidung das berechtigte Interesse.</p>
 
   <h2>Tracking auf iOS (ATT)</h2>
-  <p>Auf dem iPhone fragt das System, ob die App deine Aktivitäten erfassen darf. Nur wenn du zustimmst, erhält Google die Werbe-ID IDFA. Das Spiel funktioniert ohne diese Erlaubnis genauso. Ändern kannst du das in den iOS-Einstellungen → Datenschutz &amp; Sicherheit → Tracking. Auf Android setzt du die Werbe-ID in den Systemeinstellungen zurück oder löschst sie.</p>
+  <p>Auf dem iPhone fragt das System nach dem Einwilligungsformular, ob die App deine Aktivitäten erfassen darf. Nur wenn du zustimmst, erhält Google die Werbe-ID IDFA. Das Spiel funktioniert ohne diese Erlaubnis genauso. Ändern kannst du das in den iOS-Einstellungen → Datenschutz &amp; Sicherheit → Tracking. Auf Android setzt du die Werbe-ID in den Systemeinstellungen zurück oder löschst sie.</p>
 
   <h2>In-App-Käufe</h2>
-  <p>Den einmaligen Kauf „Premium“ wickelt Apple (App Store) oder Google (Google Play) ab. Wir sehen deine Zahlungsdaten nie. Die App erhält nur die Information, ob der Kauf aktiv ist, und speichert sie auf dem Gerät. Für die Zahlung gilt die Datenschutzerklärung von Apple bzw. Google.</p>
+  <p>Den einmaligen Kauf „Premium“ wickelt Apple (App Store) oder Google (Google Play) ab. Wir sehen deine Zahlungsdaten nie. Die App erhält nur die Information, ob der Kauf aktiv ist, und speichert sie auf dem Gerät. Für die Zahlung gilt die Datenschutzerklärung von Apple bzw. Google. Premium ist das einzige Produkt, das das Spiel verkauft.</p>
+
+  <h2>Truhen und Chancen</h2>
+  <p>Truhen verdienst du beim Spielen. Sie werden nie verkauft, und nichts, was du mit echtem Geld kaufst, bringt eine Zufallsbelohnung.</p>
+  <ul>
+    <li>Holztruhe: fällt beim aktiven Spielen aus Geldhaufen, alle 3,7 bis 4,9 Minuten.</li>
+    <li>Silbertruhe: einmal am Tag (nach dem Datum deines Telefons).</li>
+    <li>Goldtruhe: in jeder Amtszeit, wenn der geschredderte Wert zum ersten Mal 1 Million, 10 Millionen, 100 Millionen und 1 Milliarde überschreitet. Einige Erfolge geben ebenfalls Silber- und Goldtruhen.</li>
+    <li>Werbetruhe: eine zusätzliche Holztruhe für eine Werbung mit Belohnung. Immer freiwillig, höchstens eine alle 30 Minuten und 5 am Tag.</li>
+  </ul>
+  <p>Jede Truhe zahlt Geld (Prämie) im Wert der angegebenen Minuten deines aktuellen Einkommens und einen Zufallswurf für ein Extra:</p>
+  <div class="table"><table>
+    <tr><th></th><th>Holz</th><th>Silber</th><th>Gold</th></tr>
+    <tr><td>Geld (Minuten Einkommen)</td><td>0,3</td><td>1,5</td><td>2</td></tr>
+    <tr><td>Booster</td><td>45 %</td><td>50 %</td><td>55 %</td></tr>
+    <tr><td>Dickes Geld (Geld ×3)</td><td>55 %</td><td>42 %</td><td>41 %</td></tr>
+    <tr><td>Bonusstern (+1★ bei der Neuausgabe)</td><td>0 %</td><td>8 %</td><td>4 %</td></tr>
+  </table></div>
+  <p>Ein Booster ist einer von vier, alle gleich wahrscheinlich: Magnet, Doppelter Lohn, Sprintschuhe, Overdrive. Hängt der Schredder hinterher, kommen Magnet und Sprintschuhe als Overdrive. Mit Premium braucht die Werbetruhe keine Werbung und ist nicht zufällig: Du bekommst stattdessen eine feste Premium-Kiste im Wert von 0,6 Minuten Einkommen, mit denselben Limits. Das Spiel zeigt diese Chancen ebenfalls: über die Schaltfläche „i“ neben der Werbetruhe, auf der Karte jeder geöffneten Truhe und unter Einstellungen → „Truhen-Chancen“.</p>
 
   <h2>Kinder</h2>
   <p>Die App richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine Daten von ihnen. Wenn du glaubst, dass ein Kind uns Daten übermittelt hat, melde dich bitte.</p>
@@ -180,7 +249,7 @@
 
 <section id="es" lang="es">
   <h1>Política de privacidad</h1>
-  <p class="meta">Shredonomics (iOS y Android) · en vigor desde el 4 de noviembre de 2026</p>
+  <p class="meta">Shredonomics (iOS y Android) · en vigor desde el 5 de noviembre de 2026</p>
   <div class="box">
     <p>En resumen: el juego funciona sin cuenta y sin internet. Tu progreso y tus ajustes se quedan en tu dispositivo. No tenemos servidor propio. Los datos necesarios para los anuncios los trata Google (AdMob), y las compras las gestionan Apple y Google.</p>
   </div>
@@ -189,11 +258,11 @@
   <p>Shredonomics lo crea JaworIT Daniel Jaworski (responsable del tratamiento). Contacto: <a href="mailto:kontakt@jaworit.pl">kontakt@jaworit.pl</a>.</p>
 
   <h2>Datos en tu dispositivo</h2>
-  <p>El juego guarda localmente, en un archivo de partida en tu dispositivo: el progreso (valor triturado, Prima, herramientas, mejoras, robots, ubicación, Sellos y récord del mandato), la hora del último guardado (para calcular las ganancias sin conexión), los tiempos de espera de los bonus, un contador de sesiones y la hora del último anuncio a pantalla completa (para respetar los límites), los ajustes (idioma, vibración, recogida automática) y si has comprado Premium. Estos datos no se envían ni a nosotros ni a nadie. Puedes borrarlos borrando los datos de la app o desinstalándola.</p>
+  <p>El juego guarda localmente, en un archivo de partida en tu dispositivo: el progreso (valor triturado, Prima, herramientas, mejoras, robots, ubicación, Sellos, mandatos y récord), cofres, potenciadores y logros, la hora del último guardado (para calcular las ganancias sin conexión), los tiempos de espera de los bonus, un contador diario de cofres por anuncio, un contador de sesiones y la hora del último anuncio a pantalla completa (para respetar los límites), los ajustes (idioma, vibración, sonido, recogida automática) y si has comprado Premium. Estos datos no se envían ni a nosotros ni a nadie. Puedes borrarlos borrando los datos de la app o desinstalándola.</p>
   <p>No creas ninguna cuenta ni nos das tu nombre o correo electrónico. La app no usa herramientas de analítica ni de informes de fallos y no envía notificaciones.</p>
 
   <h2>Anuncios (Google AdMob)</h2>
-  <p>La versión gratuita muestra un banner en la parte inferior de la pantalla, un anuncio a pantalla completa solo al pasar a una ubicación nueva (nunca en tu primera sesión, como máximo uno cada 15 minutos) y anuncios con recompensa que inicias tú. Los anuncios los proporciona Google mediante el Google Mobile Ads SDK. Al cargar un anuncio, el SDK puede recopilar y enviar a Google:</p>
+  <p>La versión gratuita muestra un banner en la parte inferior de la pantalla, un anuncio a pantalla completa solo al pasar a una ubicación nueva (nunca en tu primera sesión, como máximo uno cada 15 minutos) y anuncios con recompensa que inicias tú: TURBO, una mejora gratis, duplicar las ganancias sin conexión y el cofre por anuncio. Los anuncios los proporciona Google mediante el Google Mobile Ads SDK. Al cargar un anuncio, el SDK puede recopilar y enviar a Google:</p>
   <ul>
     <li>identificadores del dispositivo, como el identificador de publicidad (IDFA en iOS, solo con tu permiso; ID de publicidad de Android) y el ID del conjunto de apps,</li>
     <li>la dirección IP y la ubicación aproximada derivada de ella,</li>
@@ -202,14 +271,35 @@
   </ul>
   <p>Google usa estos datos para mostrar y medir anuncios, para analítica y para prevenir el fraude. Los datos se cifran durante la transmisión. Más información: <a href="https://policies.google.com/technologies/partner-sites">Cómo utiliza Google la información de sitios web o aplicaciones que utilizan sus servicios</a> y la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</p>
 
+  <h2>Comprobación de conexión</h2>
+  <p>Para que un botón de anuncio con recompensa pueda decir «Sin conexión» en lugar de esperar un anuncio que nunca llegará, la app comprueba si tu teléfono está en línea. Envía una petición HTTPS vacía (HEAD) a <code>clients3.google.com/generate_204</code>: al iniciarse, al volver a la app y después como mucho una vez cada 30 segundos mientras el juego está abierto. La petición no contiene identificadores, cookies ni datos de la partida, y la respuesta no se guarda en ningún sitio. Como en cualquier conexión a internet, Google ve la dirección IP de tu dispositivo.</p>
+
   <h2>Consentimiento para anuncios (RGPD)</h2>
-  <p>En el Espacio Económico Europeo, el Reino Unido y Suiza, la app muestra el formulario de consentimiento de Google (UMP) antes del primer anuncio. Puedes aceptar anuncios personalizados, rechazarlos o elegir opciones detalladas. Sin consentimiento, los anuncios no se personalizan. Puedes cambiar tu elección en cualquier momento en Ajustes → «Privacidad de anuncios». La base jurídica es tu consentimiento (art. 6.1.a del RGPD) o, para anuncios no personalizados y prevención del fraude, el interés legítimo.</p>
+  <p>En el Espacio Económico Europeo, el Reino Unido y Suiza, la app muestra el formulario de consentimiento de Google (UMP) antes del primer anuncio. Puedes aceptar anuncios personalizados, rechazarlos o elegir opciones detalladas. Sin consentimiento, los anuncios no se personalizan. Puedes cambiar tu elección en cualquier momento en Ajustes (el icono del engranaje) → «Privacidad de anuncios»; el botón aparece allí donde se aplica el formulario de consentimiento. La base jurídica es tu consentimiento (art. 6.1.a del RGPD) o, para anuncios no personalizados y prevención del fraude, el interés legítimo.</p>
 
   <h2>Seguimiento en iOS (ATT)</h2>
-  <p>En el iPhone, el sistema te pregunta si la app puede rastrear tu actividad. Google solo recibe el identificador de publicidad IDFA si lo permites. El juego funciona igual sin este permiso. Puedes cambiarlo en Ajustes de iOS → Privacidad y seguridad → Rastreo. En Android puedes restablecer o eliminar el ID de publicidad en los ajustes del sistema.</p>
+  <p>En el iPhone, después del formulario de consentimiento, el sistema te pregunta si la app puede rastrear tu actividad. Google solo recibe el identificador de publicidad IDFA si lo permites. El juego funciona igual sin este permiso. Puedes cambiarlo en Ajustes de iOS → Privacidad y seguridad → Rastreo. En Android puedes restablecer o eliminar el ID de publicidad en los ajustes del sistema.</p>
 
   <h2>Compras dentro de la app</h2>
-  <p>La compra única «Premium» la procesa Apple (App Store) o Google (Google Play). Nunca vemos tus datos de pago. La app solo recibe si la compra está activa y lo guarda en tu dispositivo. Al pago se aplica la política de privacidad de Apple o de Google.</p>
+  <p>La compra única «Premium» la procesa Apple (App Store) o Google (Google Play). Nunca vemos tus datos de pago. La app solo recibe si la compra está activa y lo guarda en tu dispositivo. Al pago se aplica la política de privacidad de Apple o de Google. Premium es el único producto que vende el juego.</p>
+
+  <h2>Cofres y probabilidades</h2>
+  <p>Los cofres se ganan jugando. Nunca se venden, y nada de lo que compras con dinero real da una recompensa aleatoria.</p>
+  <ul>
+    <li>Cofre de madera: sale de los montones de dinero mientras juegas activamente, cada 3,7 a 4,9 minutos.</li>
+    <li>Cofre de plata: una vez al día (según la fecha de tu teléfono).</li>
+    <li>Cofre de oro: en cada mandato, la primera vez que el valor triturado supera 1 millón, 10 millones, 100 millones y 1000 millones. Algunos logros también dan cofres de plata y de oro.</li>
+    <li>Cofre por anuncio: un cofre de madera extra por ver un anuncio con recompensa. Siempre opcional, como máximo uno cada 30 minutos y 5 al día.</li>
+  </ul>
+  <p>Cada cofre paga dinero (Prima) equivalente a los minutos indicados de tus ingresos actuales, más un sorteo de un extra:</p>
+  <div class="table"><table>
+    <tr><th></th><th>Madera</th><th>Plata</th><th>Oro</th></tr>
+    <tr><td>Dinero (minutos de ingresos)</td><td>0,3</td><td>1,5</td><td>2</td></tr>
+    <tr><td>Potenciador</td><td>45 %</td><td>50 %</td><td>55 %</td></tr>
+    <tr><td>Dineral (dinero ×3)</td><td>55 %</td><td>42 %</td><td>41 %</td></tr>
+    <tr><td>Estrella (+1★ en la Nueva emisión)</td><td>0 %</td><td>8 %</td><td>4 %</td></tr>
+  </table></div>
+  <p>El potenciador es uno de cuatro, todos igual de probables: Imán, Paga doble, Zapatillas de sprint, Sobremarcha. Si la trituradora va atrasada, Imán y Zapatillas de sprint llegan como Sobremarcha. Con Premium, el cofre por anuncio no necesita anuncio y no es aleatorio: en su lugar recibes una Caja Premium fija equivalente a 0,6 minutos de ingresos, con los mismos límites. El juego también muestra estas probabilidades: con el botón «i» junto al cofre por anuncio, en la tarjeta de cada cofre abierto y en Ajustes → «Probabilidades de cofres».</p>
 
   <h2>Menores</h2>
   <p>La app no está dirigida a menores de 13 años y no recopila sus datos de forma consciente. Si crees que un menor nos ha facilitado datos, escríbenos.</p>
